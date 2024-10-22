@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddMyPageLabels", "AddMyPageLabels.csproj", "{30A3B517-7FDE-4806-AE6E-5BF53F50DCF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30A3B517-7FDE-4806-AE6E-5BF53F50DCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A3B517-7FDE-4806-AE6E-5BF53F50DCF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A3B517-7FDE-4806-AE6E-5BF53F50DCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A3B517-7FDE-4806-AE6E-5BF53F50DCF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {737C4F84-B092-4D2F-94BA-010ED7302FBC}
+	EndGlobalSection
+EndGlobal
