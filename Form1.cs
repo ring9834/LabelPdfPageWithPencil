@@ -45,7 +45,7 @@ namespace AddMyPageLabels
         {
             if (string.IsNullOrEmpty(this.textEdit1.Text))
             {
-                MessageBox.Show("请选择档案PDF文件所在路径后继续！", "确认", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please continue once you finish choosing the path PDF files are located！", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -109,7 +109,7 @@ namespace AddMyPageLabels
                     else
                         aimedSavePath = outputPdfPath + "\\" + fi.Name;
 
-                    message = "正在执行编页操作...针对文件" + fi.Name + "\r\n";
+                    message = "Labeling the pdf file " + fi.Name + " ... \r\n";
                     worker.ReportProgress(j, message);// transfer info to UI
                     int pages;
                     SetWatermarkForAj(pdf, aimedSavePath, startPage, gapx, gapy, allPageCount, out pages);
@@ -120,7 +120,7 @@ namespace AddMyPageLabels
                         File.Move(pdfTemp, pdf);
                         Directory.Delete(tempDir);
                     }
-                    message = fi.Name + "编页操作执行完毕！\r\n";
+                    message = fi.Name + "Labeling finished！\r\n";
                     worker.ReportProgress(j, message);// transfer info to UI
                 }
             }
@@ -165,7 +165,7 @@ namespace AddMyPageLabels
                     else
                         aimedSavePath = outputPdfPath + "\\" + fi.Name;
 
-                    message = "正在执行编页操作...针对文件" + fi.Name + "\r\n";
+                    message = "Labeling pdf file " + fi.Name + " ... \r\n";
                     worker.ReportProgress(j, message);// transfer info to UI
                     SetWatermarkForJh(pdf, aimedSavePath, startPage, gapx, gapy);
                     if (this.RdSaveCover.Checked)
@@ -174,7 +174,7 @@ namespace AddMyPageLabels
                         File.Move(pdfTemp, pdf);
                         Directory.Delete(tempDir);
                     }
-                    message += fi.Name + "编页操作执行完毕！\r\n";
+                    message += fi.Name + "Labeling finished！\r\n";
                     worker.ReportProgress(j, message);// transfer info to UI
                 }
             }
@@ -230,7 +230,7 @@ namespace AddMyPageLabels
                 string waterPath = basePath + "\\PagePng\\" + (previousPages - startPage + i + 1).ToString() + ".png";
                 if (!File.Exists(waterPath))
                 {
-                    MessageBox.Show("页码（铅笔）文件有误，请联系管理员！", "确认", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("There is an error on the pecil number file, please contact the administrator！", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 var image = Image.FromFile(waterPath);
@@ -278,7 +278,7 @@ namespace AddMyPageLabels
                 string waterPath = basePath + "\\PagePng\\" + i.ToString() + ".png";
                 if (!File.Exists(waterPath))
                 {
-                    MessageBox.Show("页码（铅笔）文件有误，请联系管理员！", "确认", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("There is an error on the pecil number file, please contact the administrator！", "Confirm", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 var image = Image.FromFile(waterPath);
@@ -313,7 +313,7 @@ namespace AddMyPageLabels
 
         private void textEdit2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("确定保存到自选路径吗？", "询问", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure to save labeled files into the customerized path？", "Request", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (!this.RdSavePickedPath.Checked)
                     this.RdSavePickedPath.Checked = true;
